@@ -8,7 +8,7 @@
     <string name="privacy_policy_url">https://www.your.com/privacyurl</string>
 
     <!-- play store application link i.e more apps -->
-    <string name="play_more_apps">https://play.google.com/store/apps/developer?id=Vishal+Android+Apps</string>
+    <string name="play_more_apps">https://play.google.com/store/apps/developer?id=</string>
 
     <!-- true if want to use RTL else false -->
     <string name="isRTL">false</string>
@@ -85,8 +85,6 @@
     <string name="get_more_gif">Get more amazing GIFs, download now</string>
     <string name="rate_this_wall">Rate this Wallpaper</string>
     <string name="rate_this_gif">Rate this GIF</string>
-    <string name="headertxt">Wallpaper Everyday</string>
+    <string name="headertxt">Wallpapers Everyday</string>
 
-    <string name="admobIdPub">pub-numradyaladmobhna</string>
-    <string name="urlprivacypolicy">http://.html</string>
 </resources>
