@@ -1,0 +1,74 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.vpapps.hdwallpaper"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [onesignal_app_id: "54fdcb59-c790-48b3-bd24-d466759bba2a",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "REMOTE"]
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes.each{
+        it.buildConfigField 'String', 'SERVER_URL', SERVER_URL
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test:runner:1.0.2') {
+        // Necessary if your app targets Marshmallow (since Espresso
+        // hasn't moved to Marshmallow yet)
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2') {
+        // Necessary if your app targets Marshmallow (since Espresso
+        // hasn't moved to Marshmallow yet)
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestImplementation 'com.android.support:support-annotations:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    implementation 'com.google.android.gms:play-services-gcm:15.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.0'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.4'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.onesignal:OneSignal:3.9.1'
+    implementation 'com.facebook.fresco:fresco:1.2.0'
+    implementation 'com.facebook.fresco:animated-gif:1.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'jp.wasabeef:recyclerview-animators:2.3.0'
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+}
+apply plugin: 'com.google.gms.google-services'

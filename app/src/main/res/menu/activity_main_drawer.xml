@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_Latest"
+        android:icon="@drawable/wallpaper"
+        android:title="@string/wallpapers" />
+
+    <item
+        android:id="@+id/nav_gif"
+        android:icon="@drawable/gif"
+        android:title="@string/gifs" />
+
+    <item
+        android:id="@+id/nav_category"
+        android:icon="@drawable/category"
+        android:title="@string/categories" />
+
+    <item
+        android:id="@+id/nav_fav"
+        android:icon="@drawable/fav"
+        android:title="@string/favourite" />
+
+    <item
+        android:id="@+id/nav_rate"
+        android:icon="@drawable/rate"
+        android:title="@string/rateapp" />
+
+    <item
+        android:id="@+id/nav_shareapp"
+        android:icon="@drawable/share"
+        android:title="@string/shareapp" />
+
+    <item
+        android:id="@+id/nav_moreapp"
+        android:icon="@drawable/more"
+        android:title="@string/menu_moreapp" />
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/about"
+        android:title="@string/menu_about" />
+
+    <item
+        android:id="@+id/nav_priacy"
+        android:icon="@drawable/privacy"
+        android:title="@string/privacy" />
+
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/settings"
+        android:title="@string/action_settings" />
+
+</menu>

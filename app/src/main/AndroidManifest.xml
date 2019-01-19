@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vpapps.hdwallpaper"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+
+    <application
+        android:name="com.vpapps.hdwallpaper.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+        <activity android:name="com.vpapps.hdwallpaper.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vpapps.hdwallpaper.MainActivity"
+            android:label="@string/title_activity_main"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.vpapps.hdwallpaper.AboutActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.vpapps.hdwallpaper.WallpaperActivity"
+            android:label="@string/title_activity_wallpaper"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vpapps.hdwallpaper.WallpaperByCatActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vpapps.hdwallpaper.WallPaperDetailsActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity
+            android:name="com.vpapps.hdwallpaper.FavouriteActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vpapps.hdwallpaper.GIFActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vpapps.hdwallpaper.GIFsDetailsActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity
+            android:name="com.vpapps.hdwallpaper.SearchWallActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vpapps.hdwallpaper.SearchGIFActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vpapps.hdwallpaper.SettingActivity"
+            android:configChanges="orientation|screenSize"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Activity required to show ad overlays. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <service
+            android:name="com.vpapps.utils.NotificationExtenderExample"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:padding="5dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:id="@+id/ll_main_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/latest_wallpaper"
+                        android:textColor="@color/gradient_color_1"
+                        android:fontFamily="@font/aclonica"
+                        android:textSize="18sp"/>
+
+                <Button
+                        android:id="@+id/button_latest_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="@string/view_all"
+                        style="@style/Right_TextView"
+                        android:textColor="@color/gradient_color_2"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_home_latest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"/>
+
+            <TextView
+                    android:id="@+id/tv_empty_home_latest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="@string/no_data_found"
+                    android:textColor="@color/grisDark"
+                    android:visibility="gone"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/mostviewed"
+                        android:textColor="@color/gradient_color_1"
+                        style="@style/Left_TextView"
+                        android:textSize="18sp"/>
+
+                <Button
+                        android:id="@+id/button_mostview_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="@string/view_all"
+                        style="@style/Right_TextView"
+                        android:textColor="@color/gradient_color_2"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_home_mostview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"/>
+
+            <TextView
+                    android:id="@+id/tv_empty_home_mostview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="@string/no_data_found"
+                    android:textColor="@color/grisDark"
+                    android:visibility="gone"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/most_rated"
+                        android:textColor="@color/gradient_color_1"
+                        style="@style/Left_TextView"
+                        android:textSize="18sp"/>
+
+                <Button
+                        android:id="@+id/button_rated_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="@string/view_all"
+                        style="@style/Right_TextView"
+                        android:textColor="@color/gradient_color_2"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_home_rated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"/>
+
+            <TextView
+                    android:id="@+id/tv_empty_home_rated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="@string/no_data_found"
+                    android:textColor="@color/grisDark"
+                    android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+                android:id="@+id/pb_home"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</ScrollView>

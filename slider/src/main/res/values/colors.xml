@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="textView_render_type_text">#FFFFFF</color>
+    <color name="colorPrimary">?attr/colorPrimary</color>
+    <color name="text_freq">#60ffffff</color>
+
+</resources>
