@@ -98,7 +98,7 @@ public class Constant implements Serializable {
 
     public static Boolean isBannerAd = true, isInterAd = true;
     public static String ad_publisher_id = "";
-    public static String url_privacy_policy = "";
+    public static String url_privacy_policy = "http://-privacy-policy.html";
     public static String ad_banner_id = "";
     public static String ad_inter_id = "";
 
