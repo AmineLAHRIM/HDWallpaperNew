@@ -64,6 +64,8 @@
         <activity
             android:name="com.vpapps.hdwallpaper.SettingActivity"
             android:configChanges="orientation|screenSize"/>
+        <activity android:name=".Gdpr">
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

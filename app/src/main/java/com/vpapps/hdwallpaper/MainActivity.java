@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     AdConsent adConsent;
     final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 102;
     private NavigationView navigationView;
+    private PrefManager prefManager;
 
 
     @Override
@@ -54,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        prefManager = new PrefManager(this);
+        prefManager.setFirstTimeLaunch(false);
+
         dbHelper = new DBHelper(this);
         methods = new Methods(this, new InterAdListener() {
             @Override

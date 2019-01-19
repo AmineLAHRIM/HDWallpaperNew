@@ -86,4 +86,7 @@
     <string name="rate_this_wall">Rate this Wallpaper</string>
     <string name="rate_this_gif">Rate this GIF</string>
     <string name="headertxt">Wallpaper Everyday</string>
+
+    <string name="admobIdPub">pub-numradyaladmobhna</string>
+    <string name="urlprivacypolicy">http://.html</string>
 </resources>

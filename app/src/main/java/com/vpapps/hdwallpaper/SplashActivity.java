@@ -4,13 +4,11 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
-
-import com.vpapps.hdwallpaper.R;
 import com.vpapps.utils.Constant;
 import com.vpapps.utils.Methods;
 
@@ -18,11 +16,14 @@ public class SplashActivity extends AppCompatActivity {
 
     Boolean isCancelled = false;
     String cid = "0", cname = "";
+    private PrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        prefManager = new PrefManager(this);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().getDecorView().setSystemUiVisibility(
@@ -49,7 +50,12 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 if(!isCancelled) {
                     if(cid.equals("0")) {
-                        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                        Intent intent;
+                        if (prefManager.isFirstTimeLaunch()) {
+                            intent = new Intent(SplashActivity.this, Gdpr.class);
+                        } else {
+                            intent = new Intent(SplashActivity.this, MainActivity.class);
+                        }
                         startActivity(intent);
                         finish();
                     } else {
