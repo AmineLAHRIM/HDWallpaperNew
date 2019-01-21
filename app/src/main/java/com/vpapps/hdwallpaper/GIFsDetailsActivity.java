@@ -24,39 +24,26 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RatingBar;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.vpapps.asyncTask.GetRating;
-import com.vpapps.asyncTask.LoadRating;
-import com.vpapps.hdwallpaper.R;
-import com.vpapps.interfaces.GetRatingListener;
-import com.vpapps.interfaces.InterAdListener;
-import com.vpapps.interfaces.RatingListener;
-import com.vpapps.utils.Constant;
-import com.vpapps.utils.DBHelper;
-import com.vpapps.utils.Methods;
+import android.view.*;
+import android.widget.*;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 import com.squareup.picasso.Picasso;
+import com.vpapps.asyncTask.GetRating;
+import com.vpapps.asyncTask.LoadRating;
+import com.vpapps.interfaces.GetRatingListener;
+import com.vpapps.interfaces.InterAdListener;
+import com.vpapps.interfaces.RatingListener;
+import com.vpapps.utils.Constant;
+import com.vpapps.utils.DBHelper;
+import com.vpapps.utils.Methods;
 import com.vpapps.utils.SharedPref;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -64,8 +51,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class GIFsDetailsActivity extends AppCompatActivity {
 
@@ -119,9 +104,9 @@ public class GIFsDetailsActivity extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
 
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.topMargin = 55;
-            toolbar.setLayoutParams(params);
+            //RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            //params.topMargin = 55;
+            //toolbar.setLayoutParams(params);
         }
         toolbar.setTitle("");
         this.setSupportActionBar(toolbar);
